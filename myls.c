@@ -34,7 +34,7 @@ int print_info(char* path)
 		if(dif->d_type == DT_DIR)
 		{
 			char concated_str[BUFFER_LEN] = {};
-			sprintf(concated_str, "%s%s", path, dif->d_name);
+			sprintf(concated_str, "%s/%s", path, dif->d_name);
 			print_info(concated_str);
 		}		
 
